@@ -28,7 +28,7 @@ To add an Encoder to Motor 2, the following objects are required additionally:
 5. fit the slimmer edge of ```bolt_magnet_holder through``` the biggest hole in general_mount
 6. add the encoder's magnet to the slot in the back of ```bolt_magnet_holder```
 7. fit the four ```M3x8mm``` screws through the encoder PCB's mounting bores
-8. between ```general mount``` and the ```encoder``` pcb, addd the four ```basi_spacers```.
+8. between ```general mount``` and the ```encoder``` pcb, addd the four ```basic_spacers```.
 9. screw the ```encoder``` in place
 10. screw the ```M4x12``` screw through ```axis_gear``` so that the screw's head can sink into the gear
 11. screw the ```m4x12``` screw attached to the ```axis_gear``` into the front side of ```bolt_magnet_holder```
