@@ -2,7 +2,7 @@
 
 ## Basis
 
-Ubuntu Server 22.04.5 LTS (64-bit) „preinstalled image“
+Ubuntu Server 22.04.5 LTS (64-bit) "preinstalled image“
 
 ## WLAN via Netplan eingerichten
 
@@ -70,7 +70,7 @@ mkswap /dev/zram0
 swapon /dev/zram0
 ```
 
-### Service /etc/systemd/system/zram-1g.service
+### Service ```/etc/systemd/system/zram-1g.service```
 
 ```service
 [Unit]
