@@ -106,3 +106,49 @@ sudo rm /var/swap
 free -h
 swapon --show
 ```
+
+## ROS2 Topics über das Netzwerk mit anderen Computern teilen
+
+auf beiden Maschinen testen, welche middleware genutzt wird
+
+```bash
+echo $RMW_IMPLEMENTATION
+```
+
+Falls die Antwort leer ist, wird der Default-Wert (FastDDS) genutzt
+
+im File ```~/.bashrc``` auf beiden Rechnern folgende Zeile hinzufügen
+
+```bash
+export ROS_DOMAIN_ID={your_domain_id}
+```
+
+danach ```~/.bashrc``` sourcen
+
+```bash
+source ~/.bashrc
+```
+
+test, ob domain id richtig übernommen wurde
+
+```bash
+echo $ROS_DOMAIN_ID
+```
+
+Gerät1:
+
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+i
+
+k
+```
+
+Gerät2:
+
+```bash
+ros2 topic echo /cmd_vel
+```
+
+Dadurch sendet Gerät1 verschiedene Twist-Messages an des Topic /cmd_vel. Das zweite Gerät sollte diese Nachrichten im echo befehl empfangen und anzeigen.
